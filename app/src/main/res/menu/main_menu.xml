@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/services_icon"
+            android:title="Services"
+
+            />
+
+        <item
+            android:id="@+id/book_appointment"
+            android:icon="@drawable/book_appointment_icon"
+            android:title="Book Appointment" />
+        <item
+            android:id="@+id/nav_parts"
+            android:icon="@drawable/parts_icon"
+            android:title="Parts" />
+
+
+    </group>
+
+    <item android:title="Profile">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/login_icon"
+                    android:title="Login" />
+
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/profile_icon"
+                    android:title="Profile" />
+
+                <item
+
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/signout_icon"
+                    android:title="Logout" />
+
+
+
+            </group>
+        </menu>
+    </item>
+    <item android:title="Communicate">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/about_us_icon"
+                android:title="About Us" />
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/contact_icon"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/rate_us_icon"
+                android:title="Rate Us" />
+        </menu>
+    </item>
+</menu>
+
+
+
+
+

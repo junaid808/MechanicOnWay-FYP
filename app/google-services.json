@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "994130976084",
+    "firebase_url": "https://mechaniconway-default-rtdb.firebaseio.com",
+    "project_id": "mechaniconway",
+    "storage_bucket": "mechaniconway.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994130976084:android:05d6f9d2b9c8ebb6f27cc1",
+        "android_client_info": {
+          "package_name": "com.example.mechaniconway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994130976084-v7jlli5drmqrpitvpfcgp6otr0ejviv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9TUDUzk_vmb9c4bwnBoi74TtYXfgYPP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994130976084-v7jlli5drmqrpitvpfcgp6otr0ejviv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994130976084:android:aaf0c3b193c23099f27cc1",
+        "android_client_info": {
+          "package_name": "com.example.mechaniconway1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994130976084-v7jlli5drmqrpitvpfcgp6otr0ejviv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9TUDUzk_vmb9c4bwnBoi74TtYXfgYPP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994130976084-v7jlli5drmqrpitvpfcgp6otr0ejviv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

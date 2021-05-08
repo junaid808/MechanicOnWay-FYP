@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MechanicOnWay1</string>
+    <string name="facebook_app_id">1853410491483290</string>
+    <string name="fb_login_protocol_scheme">fb1853410491483290</string>
+    <string name="navigation_drawer_close">Open Navigation  drawer</string>
+    <string name="navigation_drawer_open">Close Navigation  drawer</string>
+    <string name="title_activity_customer_maps">Map</string>
+    <string name="title_activity_mechanic_maps">Map</string>
+</resources>
