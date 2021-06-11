@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".MainActivity"
+    tools:context=".Tyre"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
 
@@ -85,16 +85,17 @@
                             android:layout_below="@id/bus1"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:text="Tyres"
+                            android:text="Tyre Puncture"
                             android:textColor="#000000"
                             android:textSize="22sp"
                             app:layout_constraintTop_toBottomOf="@+id/bus1"
 
                             />
                         <ImageView
+                            android:onClick="goToTyrePunture"
                             android:id="@+id/bus1"
                             android:layout_width="wrap_content"
-                            android:layout_height="185dp"
+                            android:layout_height="175dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/tire" />
@@ -121,13 +122,14 @@
                             android:layout_below="@id/bus2"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:text="Alloy"
+                            android:text="Alloy &amp; Rims"
                             android:textColor="#000000"
                             android:textSize="22sp"
                             app:layout_constraintTop_toBottomOf="@+id/bus2"
 
                             />
                         <ImageView
+                            android:onClick="goToRims"
                             android:id="@+id/bus2"
                             android:layout_width="155dp"
                             android:layout_height="175dp"

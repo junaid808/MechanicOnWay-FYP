@@ -12,13 +12,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Services extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class EngineServices extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -28,7 +27,7 @@ public class Services extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_services);
+        setContentView(R.layout.activity_engine_services);
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
@@ -50,50 +49,50 @@ public class Services extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setCheckedItem(R.id.nav_home);
 
 
-/*
-
-        ImageView EngineService = (ImageView) findViewById(R.id.engine);
-        EngineService.setClickable(true);
-        EngineService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Services.class);
-                startActivity(i);
-            }
-        });
-
-        ImageView TyreService = (ImageView) findViewById(R.id.tyre);
-        TyreService.setClickable(true);
-        TyreService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Tyre.class);
-                startActivity(i);
-            }
-        });
-
-        ImageView PetroliumService = (ImageView) findViewById(R.id.petrolium);
-        PetroliumService.setClickable(true);
-        PetroliumService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Petrolium.class);
-                startActivity(i);
-            }
-        });
 
 
-        ImageView BreakService = (ImageView) findViewById(R.id.brakes);
-        BreakService.setClickable(true);
-        BreakService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Brakes.class);
-                startActivity(i);
-            }
-        });
+//        ImageView EngineService = (ImageView) findViewById(R.id.engine);
+//        EngineService.setClickable(true);
+//        EngineService.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(DashboardActivity.this,EngineServices.class);
+//                startActivity(i);
+//            }
+//        });
+//
+//        ImageView TyreService = (ImageView) findViewById(R.id.tyre);
+//        TyreService.setClickable(true);
+//        TyreService.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(DashboardActivity.this,Tyre.class);
+//                startActivity(i);
+//            }
+//        });
+//
+//        ImageView PetroliumService = (ImageView) findViewById(R.id.petrolium);
+//        PetroliumService.setClickable(true);
+//        PetroliumService.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(DashboardActivity.this,Petrolium.class);
+//                startActivity(i);
+//            }
+//        });
+//
+//
+//        ImageView BreakService = (ImageView) findViewById(R.id.brakes);
+//        BreakService.setClickable(true);
+//        BreakService.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(DashboardActivity.this,Brakes.class);
+//                startActivity(i);
+//            }
+//        });
 
-*/
+
 
     }
 
@@ -114,16 +113,16 @@ public class Services extends AppCompatActivity implements NavigationView.OnNavi
         switch (menuItem.getItemId()) {
             case R.id.nav_service: break;
             case R.id.nav_home:
-                Intent intent = new Intent(Services.this, DashboardActivity.class);
+                Intent intent = new Intent(EngineServices.this, DashboardActivity.class);
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(Services.this, BookAppointment.class);
+                Intent intent1 = new Intent(EngineServices.this, BookAppointment.class);
                 startActivity(intent1);
                 break;
 
             case R.id.nav_parts:
-                Intent intent2 = new Intent(Services.this, Parts.class);
+                Intent intent2 = new Intent(EngineServices.this, Parts.class);
                 startActivity(intent2);
                 break;
             case R.id.nav_login:
@@ -144,5 +143,15 @@ public class Services extends AppCompatActivity implements NavigationView.OnNavi
     }
 
 
+    public void goToEngineOil(View view) {
+
+        Intent i = new Intent(this, EngineOil.class);
+        startActivity(i);
+    }
+
+    public void goToBattery(View view) {
+        Intent i = new Intent(this, Battery.class);
+        startActivity(i);
+    }
 }
 

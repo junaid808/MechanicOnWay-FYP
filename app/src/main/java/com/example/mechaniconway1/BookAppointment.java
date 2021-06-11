@@ -13,9 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
@@ -83,7 +81,7 @@ public class BookAppointment extends AppCompatActivity implements NavigationView
             switch (menuItem.getItemId()) {
                 case R.id.nav_home: break;
                 case R.id.nav_service:
-                    Intent intent = new Intent(BookAppointment.this, Services.class);
+                    Intent intent = new Intent(BookAppointment.this, EngineServices.class);
                     startActivity(intent);
                     break;
                 case R.id.book_appointment:

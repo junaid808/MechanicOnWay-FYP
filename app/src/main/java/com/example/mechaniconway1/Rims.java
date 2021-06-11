@@ -17,18 +17,16 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Petrolium extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Rims extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     Menu menu;
     TextView textView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_petrolium);
-
+        setContentView(R.layout.activity_rims);
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
         textView=findViewById(R.id.textView);
@@ -47,65 +45,12 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
         navigationView.setNavigationItemSelectedListener(this);
 
         navigationView.setCheckedItem(R.id.nav_home);
-
-
-/*
-
-        ImageView EngineService = (ImageView) findViewById(R.id.engine);
-        EngineService.setClickable(true);
-        EngineService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,EngineServices.class);
-                startActivity(i);
-            }
-        });
-
-        ImageView TyreService = (ImageView) findViewById(R.id.tyre);
-        TyreService.setClickable(true);
-        TyreService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Tyre.class);
-                startActivity(i);
-            }
-        });
-
-        ImageView PetroliumService = (ImageView) findViewById(R.id.petrolium);
-        PetroliumService.setClickable(true);
-        PetroliumService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Petrolium.class);
-                startActivity(i);
-            }
-        });
-
-
-        ImageView BreakService = (ImageView) findViewById(R.id.brakes);
-        BreakService.setClickable(true);
-        BreakService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Brakes.class);
-                startActivity(i);
-            }
-        });
-
-*/
-
     }
 
-    public void onBackPressed(){
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }
-        else
-        {super.onBackPressed();
-        }
+    public void goToWheelForm(View view) {
+        Intent i = new Intent(this, EngineForm.class);
+        startActivity(i);
     }
-
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
     {
@@ -113,16 +58,16 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
         switch (menuItem.getItemId()) {
 
             case R.id.nav_home:
-                Intent intent = new Intent(Petrolium.this, DashboardActivity.class);
+                Intent intent = new Intent(Rims.this, DashboardActivity.class);
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(Petrolium.this, BookAppointment.class);
+                Intent intent1 = new Intent(Rims.this, BookAppointment.class);
                 startActivity(intent1);
                 break;
 
             case R.id.nav_parts:
-                Intent intent2 = new Intent(Petrolium.this, Parts.class);
+                Intent intent2 = new Intent(Rims.this, Parts.class);
                 startActivity(intent2);
                 break;
             case R.id.nav_login:
@@ -143,14 +88,4 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
     }
 
 
-    public void goToPetrolRates(View view) {
-        Intent i = new Intent(this, PetrolRates.class);
-        startActivity(i);
-    }
-
-    public void gpToDieselRates(View view) {
-        Intent i = new Intent(this, DieselRates.class);
-        startActivity(i);
-    }
 }
-

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".MainActivity"
+
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
 
@@ -92,6 +92,7 @@
 
                             />
                         <ImageView
+                            android:onClick="goToEngineOil"
                             android:id="@+id/bus1"
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
@@ -121,7 +122,7 @@
                             android:layout_below="@id/bus2"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:text="Transmission"
+                            android:text="Battery"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             app:layout_constraintTop_toBottomOf="@+id/bus2"
@@ -133,7 +134,9 @@
                             android:layout_height="185dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission" />
+                            app:srcCompat="@drawable/transmission"
+                            android:onClick="goToBattery"
+                            />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 

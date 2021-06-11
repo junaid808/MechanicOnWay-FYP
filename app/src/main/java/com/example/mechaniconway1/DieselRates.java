@@ -12,12 +12,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Petrolium extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class DieselRates extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -27,8 +29,9 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_petrolium);
+        setContentView(R.layout.activity_diesel_rates);
 
+        Spinner dropdown = findViewById(R.id.spinner2);
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
         textView=findViewById(R.id.textView);
@@ -48,63 +51,25 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
 
         navigationView.setCheckedItem(R.id.nav_home);
 
+        //create a list of items for the spinner.
 
-/*
+        String[] items = new String[]{"1 Litre Diesel", "2 Litre Diesel", "3 Litre Diesel", "4 Litre Diesel", "5 Litre Diesel","6 Litre Diesel","7 Litre Diesel","8 Litre Diesel","9 Litre Diesel","10 Litre Diesel"};
 
-        ImageView EngineService = (ImageView) findViewById(R.id.engine);
-        EngineService.setClickable(true);
-        EngineService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,EngineServices.class);
-                startActivity(i);
-            }
-        });
+        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 
-        ImageView TyreService = (ImageView) findViewById(R.id.tyre);
-        TyreService.setClickable(true);
-        TyreService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Tyre.class);
-                startActivity(i);
-            }
-        });
+        //There are multiple variations of this, but this is the basic variant.
 
-        ImageView PetroliumService = (ImageView) findViewById(R.id.petrolium);
-        PetroliumService.setClickable(true);
-        PetroliumService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Petrolium.class);
-                startActivity(i);
-            }
-        });
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
 
+        //set the spinners adapter to the previously created one.
 
-        ImageView BreakService = (ImageView) findViewById(R.id.brakes);
-        BreakService.setClickable(true);
-        BreakService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Brakes.class);
-                startActivity(i);
-            }
-        });
-
-*/
-
+        dropdown.setAdapter(adapter);
     }
 
-    public void onBackPressed(){
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }
-        else
-        {super.onBackPressed();
-        }
+    public void goToBookingForm(View view) {
+        Intent i = new Intent(this, EngineForm.class);
+        startActivity(i);
     }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
@@ -113,16 +78,16 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
         switch (menuItem.getItemId()) {
 
             case R.id.nav_home:
-                Intent intent = new Intent(Petrolium.this, DashboardActivity.class);
+                Intent intent = new Intent(DieselRates.this, DashboardActivity.class);
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(Petrolium.this, BookAppointment.class);
+                Intent intent1 = new Intent(DieselRates.this, BookAppointment.class);
                 startActivity(intent1);
                 break;
 
             case R.id.nav_parts:
-                Intent intent2 = new Intent(Petrolium.this, Parts.class);
+                Intent intent2 = new Intent(DieselRates.this, Parts.class);
                 startActivity(intent2);
                 break;
             case R.id.nav_login:
@@ -141,16 +106,4 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
-    public void goToPetrolRates(View view) {
-        Intent i = new Intent(this, PetrolRates.class);
-        startActivity(i);
-    }
-
-    public void gpToDieselRates(View view) {
-        Intent i = new Intent(this, DieselRates.class);
-        startActivity(i);
-    }
 }
-

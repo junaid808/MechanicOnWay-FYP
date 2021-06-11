@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,7 +59,7 @@ public class Brakes extends AppCompatActivity implements NavigationView.OnNaviga
         EngineService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Services.class);
+                Intent i = new Intent(DashboardActivity.this,EngineServices.class);
                 startActivity(i);
             }
         });
@@ -145,6 +146,16 @@ public class Brakes extends AppCompatActivity implements NavigationView.OnNaviga
     }
 
 
+    public void goToBrakeForm(View view) {
+        Intent i =  new Intent(this, EngineForm.class);
+        startActivity(i);
 
+    }
+
+    public void goToBrakeRates(View view) {
+        Intent i  =  new Intent(this, BrakeRates.class);
+        startActivity(i);
+
+    }
 }
 

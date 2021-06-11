@@ -83,7 +83,7 @@ public class Parts extends AppCompatActivity implements NavigationView.OnNavigat
                 startActivity(intent0);
                 break;
             case R.id.nav_service:
-                Intent intent = new Intent(Parts.this, Services.class);
+                Intent intent = new Intent(Parts.this, EngineServices.class);
                 startActivity(intent);
                 break;
             case R.id.book_appointment:

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".MainActivity"
+    tools:context=".Petrolium"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
 
@@ -92,6 +92,7 @@
 
                             />
                         <ImageView
+                            android:onClick="goToPetrolRates"
                             android:id="@+id/bus1"
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
@@ -128,6 +129,7 @@
 
                             />
                         <ImageView
+                            android:onClick="gpToDieselRates"
                             android:id="@+id/bus2"
                             android:layout_width="155dp"
                             android:layout_height="185dp"

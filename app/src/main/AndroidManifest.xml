@@ -19,7 +19,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MechanicOnWay1">
-        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".Call" />
+        <activity android:name=".DieselRates" />
+        <activity android:name=".PetrolRates" />
+        <activity android:name=".Rims" />
+        <activity android:name=".TyreWheelService" />
+        <activity android:name=".EngineForm" />
+        <activity
+            android:name=".BrakeRates"
+            android:label="@string/title_activity_brake_rates"
+            android:theme="@style/Theme.MechanicOnWay1.NoActionBar" />
+        <activity android:name=".Battery" />
+        <activity android:name=".EngineOil" />
+        <activity android:name=".AboutUs" />
         <activity android:name=".SignUpMechanic" />
         <activity android:name=".SettingActivity" />
         <!--
@@ -50,7 +63,7 @@
         <activity android:name=".Tyre" />
         <activity android:name=".Parts" />
         <activity android:name=".BookAppointment" />
-        <activity android:name=".Services" />
+        <activity android:name=".EngineServices" />
         <activity android:name=".ActivityOne" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".DashboardActivity" />

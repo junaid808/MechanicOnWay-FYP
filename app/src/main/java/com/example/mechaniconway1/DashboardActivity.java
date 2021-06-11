@@ -9,14 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -67,7 +65,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         EngineService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Services.class);
+                Intent i = new Intent(DashboardActivity.this, EngineServices.class);
                 startActivity(i);
             }
         });
@@ -129,9 +127,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     {
 
         switch (menuItem.getItemId()) {
+
             case R.id.nav_home: break;
             case R.id.nav_service:
-                Intent intent = new Intent(DashboardActivity.this, Services.class);
+                Intent intent = new Intent(DashboardActivity.this, EngineServices.class);
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
@@ -156,6 +155,10 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             case R.id.nav_about_us:
                 Intent intent3 = new Intent(DashboardActivity.this,AboutUs.class);
                 startActivity(intent3); break;
+            case R.id.nav_contact:
+                Intent intent4 =  new Intent(this, ContactUs.class);
+                startActivity(intent4);
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

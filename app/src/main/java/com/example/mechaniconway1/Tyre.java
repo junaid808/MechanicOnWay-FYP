@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,7 +56,7 @@ public class Tyre extends AppCompatActivity implements NavigationView.OnNavigati
         EngineService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this,Services.class);
+                Intent i = new Intent(DashboardActivity.this,EngineServices.class);
                 startActivity(i);
             }
         });
@@ -142,6 +143,19 @@ public class Tyre extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
 
+//    public void goToTyreService(View view) {
+//        Intent i = new Intent(this, TyreWheelService.class);
+//        startActivity(i);
+//    }
 
+    public void goToTyrePunture(View view) {
+        Intent i = new Intent(this, EngineForm.class);
+        startActivity(i);
+    }
+
+    public void goToRims(View view) {
+        Intent i = new Intent(this, Rims.class);
+        startActivity(i);
+    }
 }
 
