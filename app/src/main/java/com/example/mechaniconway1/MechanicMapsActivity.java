@@ -4,11 +4,15 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -68,7 +72,8 @@ public class MechanicMapsActivity extends FragmentActivity implements OnMapReady
     private DatabaseReference AssignedCustomerRef;
     private DatabaseReference AssignedCustomerPickUpRef;
     Marker PickUpMarker;
-
+    private ImageView phoneMechanic;
+    private String customerphonenumber;
 
 
 
@@ -98,6 +103,7 @@ public class MechanicMapsActivity extends FragmentActivity implements OnMapReady
         profilePic = findViewById(R.id.profile_image_customer);
         relativeLayout = findViewById(R.id.rel2);
         txtCarName = findViewById(R.id.car_name_driver);
+        phoneMechanic = findViewById(R.id.phoneM);
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -120,13 +126,51 @@ public class MechanicMapsActivity extends FragmentActivity implements OnMapReady
 
 
 
+                LogOutUser();
 
-
+                mAuth.signOut();
 
                 currentLogOutUserStatus = true;
                 DisconnectDriver();
-                mAuth.signOut();
-                LogOutUser();
+
+
+
+
+
+            }
+        });
+
+        phoneMechanic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference()
+                        .child("Users").child("Customers").child(customerID);
+
+                reference1.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot)
+                    {
+                        if (dataSnapshot.exists()  &&  dataSnapshot.getChildrenCount() > 0)
+                        {
+                            //String name = dataSnapshot.child("name").getValue().toString();
+                            String phone = dataSnapshot.child("phone").getValue().toString();
+                            //String car = dataSnapshot.child("car").getValue().toString();
+
+
+                            Intent intent = new Intent (Intent.ACTION_DIAL);
+                            //intent.setData(Uri.parse("tel:03244366399"));
+                            intent.setData(Uri.parse("tel:" +phone));
+                            startActivity(intent);
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
 
 
 

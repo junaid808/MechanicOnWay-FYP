@@ -159,6 +159,7 @@ public class CustomerMapsActivity extends FragmentActivity implements OnMapReady
             @Override
             public void onClick(View v)
             {
+                //SettingsButton.setVisibility(View.GONE);
                 try{
                     //Try to do something on here
                     if(requestType)
@@ -558,7 +559,7 @@ public class CustomerMapsActivity extends FragmentActivity implements OnMapReady
 
     public void LogOutUser()
     {
-        Intent startPageIntent = new Intent(CustomerMapsActivity.this, MainActivity.class);
+        Intent startPageIntent = new Intent(CustomerMapsActivity.this, DashboardActivity.class);
         startPageIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(startPageIntent);
         finish();

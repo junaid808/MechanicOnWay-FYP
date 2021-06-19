@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:context="com.example.mechaniconway1.MechanicMapsActivity">
+    tools:context=".MechanicMapsActivity">
 
 
     <!--<include-->
@@ -76,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:visibility="gone"
+        android:visibility="visible"
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -136,7 +136,7 @@
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:src="@drawable/phone"
-
+            android:id="@+id/phoneM"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="10dp"
             android:layout_centerVertical="true"
