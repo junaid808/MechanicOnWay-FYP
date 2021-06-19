@@ -19,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MechanicOnWay1">
-        <activity android:name=".BatteryForm"></activity>
+        <activity android:name=".DieselForm"></activity>
+        <activity android:name=".PetrolForm" />
+        <activity android:name=".BatteryForm" />
         <activity android:name=".RimForm" />
         <activity android:name=".TyreForm" />
         <activity android:name=".NewBrakeForm" />

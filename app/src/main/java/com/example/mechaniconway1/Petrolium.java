@@ -144,12 +144,12 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
 
 
     public void goToPetrolRates(View view) {
-        Intent i = new Intent(this, PetrolRates.class);
+        Intent i = new Intent(this, PetrolForm.class);
         startActivity(i);
     }
 
     public void gpToDieselRates(View view) {
-        Intent i = new Intent(this, DieselRates.class);
+        Intent i = new Intent(this, DieselForm.class);
         startActivity(i);
     }
 }
