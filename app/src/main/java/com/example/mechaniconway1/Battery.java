@@ -49,10 +49,7 @@ public class Battery extends AppCompatActivity implements NavigationView.OnNavig
     }
 
 
-    public void goToEngineForm(View view) {
-        Intent i = new Intent(this, EngineForm.class);
-        startActivity(i);
-    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
@@ -90,4 +87,8 @@ public class Battery extends AppCompatActivity implements NavigationView.OnNavig
         return true;
     }
 
+    public void goToBatteryForm(View view) {
+        Intent i = new Intent(this, BatteryForm.class);
+        startActivity(i);
+    }
 }

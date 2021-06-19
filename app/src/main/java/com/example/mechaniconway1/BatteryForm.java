@@ -1,15 +1,13 @@
 package com.example.mechaniconway1;
 
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.Calendar;
-import android.os.Bundle;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
-
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -17,7 +15,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-public class EngineForm extends AppCompatActivity {
+import java.util.Calendar;
+
+public class BatteryForm extends AppCompatActivity {
+
     private static Button date, time;
     private static TextView set_date, set_time;
     private static final int Date_id = 0;
@@ -26,21 +27,24 @@ public class EngineForm extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_engine_form);
+        setContentView(R.layout.activity_battery_form);
+
         date = (Button) findViewById(R.id.selectdate);
         time = (Button) findViewById(R.id.selecttime);
         set_date = (TextView) findViewById(R.id.set_date);
         set_time = (TextView) findViewById(R.id.set_time);
-        Spinner dropdown = findViewById(R.id.spinner3);
-//create a list of items for the spinner.
-        String[] items = new String[]{"Engine Service", "Petroleum Service", "Brakes Service", "Tyre Service"};
+        Spinner dropdown = findViewById(R.id.batterySpinner);
+        String[] items = new String[]{
+
+                "AGS @ RS:12,000", "EXIDE @ RS:15,000","OSAKA @ RS:16,000", "PHOENIX @ RS:18,000"
+        };
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
 //set the spinners adapter to the previously created one.
         dropdown.setAdapter(adapter);
 
-        date.setOnClickListener(new OnClickListener() {
+        date.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -49,7 +53,7 @@ public class EngineForm extends AppCompatActivity {
                 showDialog(Date_id);
             }
         });
-        time.setOnClickListener(new OnClickListener() {
+        time.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -77,12 +81,12 @@ public class EngineForm extends AppCompatActivity {
             case Date_id:
 
                 // Open the datepicker dialog
-                return new DatePickerDialog(EngineForm.this, date_listener, year,
+                return new DatePickerDialog(BatteryForm.this, date_listener, year,
                         month, day);
             case Time_id:
 
                 // Open the timepicker dialog
-                return new TimePickerDialog(EngineForm.this, time_listener, hour,
+                return new TimePickerDialog(BatteryForm.this, time_listener, hour,
                         minute, false);
 
         }
@@ -111,6 +115,9 @@ public class EngineForm extends AppCompatActivity {
     };
 
     public void bookAppointment(View view) {
+        Intent i = new Intent(this, BatteryForm.class);
+        startActivity(i);
     }
-}
 
+
+}

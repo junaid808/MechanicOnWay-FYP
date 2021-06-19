@@ -19,7 +19,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MechanicOnWay1">
-        <activity android:name=".NewBrakeForm"></activity>
+        <activity android:name=".BatteryForm"></activity>
+        <activity android:name=".RimForm" />
+        <activity android:name=".TyreForm" />
+        <activity android:name=".NewBrakeForm" />
         <activity android:name=".BrakeReapirForm" />
         <activity android:name=".ContactUs" />
         <activity android:name=".Call" />
@@ -27,7 +30,7 @@
         <activity android:name=".PetrolRates" />
         <activity android:name=".Rims" />
         <activity android:name=".TyreWheelService" />
-        <activity android:name=".EngineForm" />
+        <activity android:name=".EngineOilForm" />
         <activity
             android:name=".BrakeRates"
             android:label="@string/title_activity_brake_rates"

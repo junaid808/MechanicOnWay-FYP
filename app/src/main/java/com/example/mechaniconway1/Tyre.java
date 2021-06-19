@@ -149,7 +149,7 @@ public class Tyre extends AppCompatActivity implements NavigationView.OnNavigati
 //    }
 
     public void goToTyrePunture(View view) {
-        Intent i = new Intent(this, EngineForm.class);
+        Intent i = new Intent(this, TyreForm.class);
         startActivity(i);
     }
 

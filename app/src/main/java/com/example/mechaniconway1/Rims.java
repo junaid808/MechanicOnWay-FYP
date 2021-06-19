@@ -48,7 +48,7 @@ public class Rims extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
     public void goToWheelForm(View view) {
-        Intent i = new Intent(this, EngineForm.class);
+        Intent i = new Intent(this, RimForm.class);
         startActivity(i);
     }
     @Override

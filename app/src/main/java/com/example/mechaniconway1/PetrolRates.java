@@ -59,7 +59,7 @@ public class PetrolRates extends AppCompatActivity implements NavigationView.OnN
     }
 
     public void goToBookingForm(View view) {
-        Intent i = new Intent(this, EngineForm.class);
+        Intent i = new Intent(this, EngineOilForm.class);
         startActivity(i);
     }
 

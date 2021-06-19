@@ -95,7 +95,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
-                            android:onClick="goToEngineForm"
+                            android:onClick="goToBatteryForm"
                             app:srcCompat="@drawable/oil"
 
                             />
@@ -151,7 +151,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/transmission"
-                            android:onClick="goToEngineForm"
+                            android:onClick="goToBatteryForm"
                             />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -213,7 +213,7 @@
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/oil"
-                            android:onClick="goToEngineForm"
+                            android:onClick="goToBatteryForm"
 
                             />
                     </RelativeLayout>
@@ -268,7 +268,7 @@
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/transmission"
-                            android:onClick="goToEngineForm"
+                            android:onClick="goToBatteryForm"
                             />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
