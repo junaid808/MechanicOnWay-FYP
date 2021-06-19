@@ -18,7 +18,7 @@ public class AboutUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        buttonCall = findViewById(R.id.btnCall);
+        /*buttonCall = findViewById(R.id.btnCall);
         buttonCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,7 +27,7 @@ public class AboutUs extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });
+        });*/
 
     }
 }

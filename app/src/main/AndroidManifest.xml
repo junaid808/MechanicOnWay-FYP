@@ -19,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MechanicOnWay1">
-        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".NewBrakeForm"></activity>
+        <activity android:name=".BrakeReapirForm" />
+        <activity android:name=".ContactUs" />
         <activity android:name=".Call" />
         <activity android:name=".DieselRates" />
         <activity android:name=".PetrolRates" />

@@ -7,26 +7,26 @@
             android:icon="@drawable/home_icon"
             android:title="Home" />
 
-        <item
+       <!-- <item
             android:id="@+id/nav_service"
             android:icon="@drawable/services_icon"
             android:title="Services"
 
-            />
+            />-->
 
         <item
             android:id="@+id/book_appointment"
             android:icon="@drawable/book_appointment_icon"
             android:title="Book Appointment" />
         <item
-            android:id="@+id/nav_parts"
+            android:id="@+id/nav_cancel_appointment"
             android:icon="@drawable/parts_icon"
-            android:title="Parts" />
+            android:title="Cancel Appointment" />
 
 
     </group>
 
-    <item android:title="Profile">
+<!--    <item android:title="Profile">
 
         <menu>
 
@@ -52,7 +52,7 @@
 
             </group>
         </menu>
-    </item>
+    </item>-->
     <item android:title="Communicate">
 
         <menu>

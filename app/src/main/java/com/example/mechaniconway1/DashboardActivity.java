@@ -129,20 +129,17 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         switch (menuItem.getItemId()) {
 
             case R.id.nav_home: break;
-            case R.id.nav_service:
-                Intent intent = new Intent(DashboardActivity.this, EngineServices.class);
-                startActivity(intent);
-                break;
+
             case R.id.book_appointment:
                 Intent intent1 = new Intent(DashboardActivity.this, BookAppointment.class);
                 startActivity(intent1);
                 break;
 
-            case R.id.nav_parts:
+            case R.id.nav_cancel_appointment:
                 Intent intent2 = new Intent(DashboardActivity.this, Parts.class);
                 startActivity(intent2);
                 break;
-            case R.id.nav_login:
+           /* case R.id.nav_login:
                 menu.findItem(R.id.nav_logout).setVisible(true);
                 menu.findItem(R.id.nav_profile).setVisible(true);
                 menu.findItem(R.id.nav_login).setVisible(false);
@@ -151,7 +148,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 menu.findItem(R.id.nav_logout).setVisible(false);
                 menu.findItem(R.id.nav_profile).setVisible(false);
                 menu.findItem(R.id.nav_login).setVisible(true);
-                break;
+                break;*/
             case R.id.nav_about_us:
                 Intent intent3 = new Intent(DashboardActivity.this,AboutUs.class);
                 startActivity(intent3); break;
