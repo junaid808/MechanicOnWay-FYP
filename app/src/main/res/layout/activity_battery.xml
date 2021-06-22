@@ -151,7 +151,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/transmission"
-                            android:onClick="goToBatteryForm"
+                            android:onClick="goToBatteryForm2"
                             />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -213,7 +213,7 @@
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/oil"
-                            android:onClick="goToBatteryForm"
+                            android:onClick="goToBatteryForm3"
 
                             />
                     </RelativeLayout>
@@ -268,7 +268,7 @@
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/transmission"
-                            android:onClick="goToBatteryForm"
+                            android:onClick="goToBatteryForm4"
                             />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>

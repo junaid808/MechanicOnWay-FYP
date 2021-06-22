@@ -23,6 +23,7 @@ public class Rims extends AppCompatActivity implements NavigationView.OnNavigati
     Toolbar toolbar;
     Menu menu;
     TextView textView;
+    String Data ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,10 +48,7 @@ public class Rims extends AppCompatActivity implements NavigationView.OnNavigati
         navigationView.setCheckedItem(R.id.nav_home);
     }
 
-    public void goToWheelForm(View view) {
-        Intent i = new Intent(this, RimForm.class);
-        startActivity(i);
-    }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
     {
@@ -87,5 +85,30 @@ public class Rims extends AppCompatActivity implements NavigationView.OnNavigati
         return true;
     }
 
+    public void goToWheelForm(View view) {
+        Data="17 x 7.5 Inches @ RS:30,000";
+        Intent i = new Intent(this, RimForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+    public void goToWheelForm2(View view) {
+        Data="15 x 6.5 Inches @ RS:25,000";
+        Intent i = new Intent(this, RimForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
 
+    public void goToWheelForm3(View view) {
+        Data="13 x 5.5 Inches @ RS:23,000";
+        Intent i = new Intent(this, RimForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+
+    public void goToWheelForm4(View view) {
+        Data="12 x 4.5 Inches @ RS:21,000";
+        Intent i = new Intent(this, RimForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
 }

@@ -23,6 +23,7 @@ public class BrakeRates extends AppCompatActivity implements NavigationView.OnNa
     Toolbar toolbar;
     Menu menu;
     TextView textView;
+    String Data ;
 
 
     @Override
@@ -85,7 +86,30 @@ public class BrakeRates extends AppCompatActivity implements NavigationView.OnNa
     }
 
     public void goToBrakeForm(View view) {
-        Intent i  = new Intent(this, NewBrakeForm.class);
+        Data="Suzuki @ RS:3000";
+        Intent i = new Intent(this, NewBrakeForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+
+    public void goToBrakeForm2(View view) {
+        Data="Honda @ RS:4500";
+        Intent i = new Intent(this, NewBrakeForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+
+    public void goToBrakeForm3(View view) {
+        Data="Toyota @ RS:3500";
+        Intent i = new Intent(this, NewBrakeForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+
+    public void goToBrakeForm4(View view) {
+        Data="Mercedes @ RS: 6500";
+        Intent i = new Intent(this, NewBrakeForm.class);
+        i.putExtra("extra", Data);
         startActivity(i);
     }
 }

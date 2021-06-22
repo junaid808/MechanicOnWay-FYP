@@ -60,6 +60,7 @@ public class BatteryForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battery_form);
 
+        String extra = getIntent().getStringExtra("extra");
 
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
@@ -78,10 +79,7 @@ public class BatteryForm extends AppCompatActivity {
         set_date = (TextView) findViewById(R.id.set_dateBatteryForm);
         set_time = (TextView) findViewById(R.id.set_timeBatteryForm);
         Spinner dropdown = findViewById(R.id.batterySpinner);
-        String[] items = new String[]{
-
-                "AGS @ RS:12,000", "EXIDE @ RS:15,000","OSAKA @ RS:16,000", "PHOENIX @ RS:18,000"
-        };
+        String[] items = new String[]{extra};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);

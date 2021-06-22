@@ -53,7 +53,7 @@ public class DieselRates extends AppCompatActivity implements NavigationView.OnN
 
         //create a list of items for the spinner.
 
-        String[] items = new String[]{"1 Litre Diesel", "2 Litre Diesel", "3 Litre Diesel", "4 Litre Diesel", "5 Litre Diesel","6 Litre Diesel","7 Litre Diesel","8 Litre Diesel","9 Litre Diesel","10 Litre Diesel"};
+        String[] items = new String[]{"1 Litre Diesel @ Rs 130", "2 Litre Diesel @ Rs 260", "3 Litre Diesel @ Rs 390", "4 Litre Diesel @ Rs 520", "5 Litre Diesel @ Rs 650"/*,"6 Litre Diesel","7 Litre Diesel","8 Litre Diesel","9 Litre Diesel","10 Litre Diesel"*/};
 
         //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 

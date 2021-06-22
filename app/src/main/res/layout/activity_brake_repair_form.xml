@@ -67,7 +67,7 @@
 
                 <EditText
 
-                    android:id="@+id/name"
+                    android:id="@+id/nameBreakRepairForm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -75,7 +75,7 @@
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/address"
+                    android:id="@+id/addressBreakRepairForm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -83,7 +83,7 @@
                     android:inputType="textPostalAddress" />
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/emailBreakRepairForm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -91,7 +91,7 @@
                     android:inputType="textEmailAddress" />
 
                 <EditText
-                    android:id="@+id/contact"
+                    android:id="@+id/contactBreakRepairForm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -99,7 +99,7 @@
                     android:inputType="number" />
                 <Spinner
 
-                    android:id="@+id/oilSpinner"
+                    android:id="@+id/BreakRepairFormSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:drawable/btn_dropdown"
@@ -111,7 +111,7 @@
                     android:orientation="horizontal">
                     <Button
 
-                        android:id="@+id/selectdate"
+                        android:id="@+id/selectdateBreakRepairForm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -119,7 +119,7 @@
                         android:text="Select Date" />
 
                     <TextView
-                        android:id="@+id/set_date"
+                        android:id="@+id/set_dateBreakRepairForm"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -136,7 +136,7 @@
                     <Button
 
 
-                        android:id="@+id/selecttime"
+                        android:id="@+id/selecttimeBreakRepairForm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -144,7 +144,7 @@
                         android:text="Select Time" />
 
                     <TextView
-                        android:id="@+id/set_time"
+                        android:id="@+id/set_timeBreakRepairForm"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"

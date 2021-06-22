@@ -23,6 +23,7 @@ public class Battery extends AppCompatActivity implements NavigationView.OnNavig
     Toolbar toolbar;
     Menu menu;
     TextView textView;
+    String Data ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +89,30 @@ public class Battery extends AppCompatActivity implements NavigationView.OnNavig
     }
 
     public void goToBatteryForm(View view) {
+        Data="AGS @ RS:12,000";
         Intent i = new Intent(this, BatteryForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+
+    public void goToBatteryForm2(View view) {
+        Data="EXIDE @ RS:15,000";
+        Intent i = new Intent(this, BatteryForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+
+    public void goToBatteryForm3(View view) {
+        Data="OSAKA @ RS:16,000";
+        Intent i = new Intent(this, BatteryForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+
+    public void goToBatteryForm4(View view) {
+        Data="PHOENIX @ RS:18,000";
+        Intent i = new Intent(this, BatteryForm.class);
+        i.putExtra("extra", Data);
         startActivity(i);
     }
 }

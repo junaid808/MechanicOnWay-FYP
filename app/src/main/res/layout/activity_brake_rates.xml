@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".Brakes"
+    tools:context=".BrakeRates"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
 
@@ -151,7 +151,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/transmission"
-                            android:onClick="goToBrakeForm"
+                            android:onClick="goToBrakeForm2"
                             />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -213,7 +213,7 @@
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/oil"
-                            android:onClick="goToBrakeForm"
+                            android:onClick="goToBrakeForm3"
 
                             />
                     </RelativeLayout>
@@ -267,7 +267,7 @@
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
                             app:srcCompat="@drawable/transmission"
-                            android:onClick="goToBrakeForm"
+                            android:onClick="goToBrakeForm4"
                             />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>

@@ -23,7 +23,7 @@ public class EngineOil extends AppCompatActivity implements NavigationView.OnNav
     Toolbar toolbar;
     Menu menu;
     TextView textView;
-
+    String Data ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,10 +51,7 @@ public class EngineOil extends AppCompatActivity implements NavigationView.OnNav
     }
 
 
-    public void goToEngineForm(View view) {
-        Intent i = new Intent(this, EngineOilForm.class);
-        startActivity(i);
-    }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
     {
@@ -90,4 +87,33 @@ public class EngineOil extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-}
+    public void goToEngineForm(View view) {
+
+        Data="Zic 3 Litre @ RS: 3500";
+        Intent i = new Intent(this, EngineOilForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+    public void goToEngineForm2(View view) {
+        Data="STP 4 Litre @ RS: 3500";
+        Intent i = new Intent(this, EngineOilForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+
+    public void goToEngineForm3(View view) {
+        Data="Shell 4 Litre @ RS 3400";
+        Intent i = new Intent(this, EngineOilForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+    public void goToEngineForm4(View view) {
+        Data="Havoline 3 Litre @ RS 3000";
+        Intent i = new Intent(this, EngineOilForm.class);
+        i.putExtra("extra", Data);
+        startActivity(i);
+    }
+    }
+
+
+
