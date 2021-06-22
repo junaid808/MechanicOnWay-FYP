@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
-    private EditText emailEt,passwordEt1,passwordEt2;
+    private EditText emailEt,passwordEt1,passwordEt2,userNameEt;
     private Button SignUpButton;
     private TextView SignInTv;
     private ProgressDialog progressDialog;
@@ -37,12 +37,13 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         firebaseAuth=FirebaseAuth.getInstance();
 
-        emailEt=findViewById(R.id.email);
-        passwordEt1=findViewById(R.id.password1);
-        passwordEt2=findViewById(R.id.password2);
-        SignUpButton=findViewById(R.id.register);
+        userNameEt =findViewById(R.id.inputUsername);
+        emailEt=findViewById(R.id.inputEmail);
+        passwordEt1=findViewById(R.id.inputPassword);
+        passwordEt2=findViewById(R.id.inputConformPassword);
+        SignUpButton=findViewById(R.id.btnRegister);
         progressDialog=new ProgressDialog(this);
-        SignInTv=findViewById(R.id.signInTv);
+        SignInTv=findViewById(R.id.alreadyHaveAccount);
         SignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,10 +60,17 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
     private void Register(){
+        //Take data from XML file
+        String userName=userNameEt.getText().toString();
         String email=emailEt.getText().toString();
         String password1=passwordEt1.getText().toString();
         String password2=passwordEt2.getText().toString();
-        if(TextUtils.isEmpty(email)){
+
+        if(TextUtils.isEmpty(userName)){
+            userNameEt.setError("Enter your username");
+            return;
+        }
+        else if(TextUtils.isEmpty(email)){
             emailEt.setError("Enter your email");
             return;
         }

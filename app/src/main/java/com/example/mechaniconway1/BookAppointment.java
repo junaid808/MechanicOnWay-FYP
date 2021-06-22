@@ -90,16 +90,8 @@ public class BookAppointment extends AppCompatActivity implements NavigationView
                     Intent intent2 = new Intent(BookAppointment.this, Parts.class);
                     startActivity(intent2);
                     break;
-/*  case R.id.nav_login:
-                    menu.findItem(R.id.nav_logout).setVisible(true);
-                    menu.findItem(R.id.nav_profile).setVisible(true);
-                    menu.findItem(R.id.nav_login).setVisible(false);
-                    break;
-                case R.id.nav_logout:
-                    menu.findItem(R.id.nav_logout).setVisible(false);
-                    menu.findItem(R.id.nav_profile).setVisible(false);
-                    menu.findItem(R.id.nav_login).setVisible(true);
-                    break;*/
+
+
 
                 case R.id.nav_about_us:
                     Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show(); break;

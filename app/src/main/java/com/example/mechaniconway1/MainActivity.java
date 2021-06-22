@@ -58,7 +58,8 @@ import com.google.firebase.database.FirebaseDatabase;
     private GoogleSignInClient mGoogleSignInClient;
     private String TAG = "MainActivity";
     private int RC_Sign_In = 1;
-    private ImageView googleSignIn;
+    /*private ImageView googleSignIn;*/
+     private Button googleSignIn;
     private CallbackManager mCallBackManager;
     private LoginButton fbButton;
     private ImageView fbSignIn;
@@ -80,17 +81,17 @@ import com.google.firebase.database.FirebaseDatabase;
 
         firebaseAuth=FirebaseAuth.getInstance();
         FacebookSdk.sdkInitialize(getApplicationContext());
-        fbButton = findViewById(R.id.fblogin_button);
-        fbButton.setReadPermissions("email","public_profile");
-        fbSignIn = findViewById(R.id.fbImageView);
-        emailEt=findViewById(R.id.email);
-        passwordEt=findViewById(R.id.password);
-        SignInButton=findViewById(R.id.login);
+        //fbButton = findViewById(R.id.fblogin_button);
+        //fbButton.setReadPermissions("email","public_profile");
+        //fbSignIn = findViewById(R.id.fbImageView);
+        emailEt=findViewById(R.id.email_customer);
+        passwordEt=findViewById(R.id.password_customer);
+        SignInButton=findViewById(R.id.login_customer_btn);
         progressDialog=new ProgressDialog(this);
-        SignUpTv=findViewById(R.id.signUp);
-        googleSignIn=findViewById(R.id.googleImageView);
+        SignUpTv=findViewById(R.id.signUp_customer);
+        googleSignIn=findViewById(R.id.btnGoogle_customer);
         mCallBackManager = CallbackManager.Factory.create();
-        fbButton.registerCallback(mCallBackManager, new FacebookCallback<LoginResult>() {
+       /* fbButton.registerCallback(mCallBackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG1,"OnSucces"+ loginResult);
@@ -108,7 +109,7 @@ import com.google.firebase.database.FirebaseDatabase;
             public void onError(FacebookException error) {
                 Log.d(TAG1,"onError" + error);
             }
-        });
+        });*/
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override

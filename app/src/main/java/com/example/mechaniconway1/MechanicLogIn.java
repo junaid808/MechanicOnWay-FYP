@@ -58,11 +58,11 @@ public class MechanicLogIn extends AppCompatActivity {
 
         Myauth = FirebaseAuth.getInstance();
 
-        mechanicLoginButton = (Button) findViewById(R.id.login_mechanic);
+        mechanicLoginButton = (Button) findViewById(R.id.login_mechanic_btn);
         mechanicEmail = (EditText) findViewById(R.id.email_mechanic);
         mechanicPassword =(EditText) findViewById(R.id.password_mechanic);
         loadingBar = new ProgressDialog(this);
-        SignUpMechanic= findViewById(R.id.signUp);
+        /*SignUpMechanic= findViewById(R.id.signUp);*/
 
 
 
@@ -78,14 +78,14 @@ public class MechanicLogIn extends AppCompatActivity {
                 loginMechanic(email,password);
             }
         });
-        SignUpMechanic.setOnClickListener(new View.OnClickListener() {
+        /*SignUpMechanic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MechanicLogIn.this,SignUpMechanic.class);
                 startActivity(intent);
                 finish();
             }
-        });
+        });*/
 
 
     }

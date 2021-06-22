@@ -28,8 +28,8 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="#015fea"
+                android:layout_height="60dp"
+                android:background="@drawable/bg"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -243,12 +243,12 @@
                     android:layout_height="60dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginLeft="50dp"
-                    android:background="@drawable/button_back"
+                    android:background="@drawable/btn_bg"
                     android:text="Urgent Assistance"
                     android:textAllCaps="false"
                     android:textColor="#ffffff"
                     android:textSize="25dp"
-                    app:backgroundTint="#1A237E" />
+                    app:backgroundTint="#029AED" />
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
