@@ -63,7 +63,7 @@ public class EngineOil extends AppCompatActivity implements NavigationView.OnNav
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(EngineOil.this, BookAppointment.class);
+                Intent intent1 = new Intent(EngineOil.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

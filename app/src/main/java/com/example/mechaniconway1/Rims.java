@@ -60,7 +60,7 @@ public class Rims extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(Rims.this, BookAppointment.class);
+                Intent intent1 = new Intent(Rims.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

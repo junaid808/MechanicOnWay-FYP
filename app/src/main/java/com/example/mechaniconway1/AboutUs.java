@@ -79,7 +79,7 @@ public class AboutUs extends AppCompatActivity implements NavigationView.OnNavig
                 break;
 
             case R.id.book_appointment:
-                Intent intent1 = new Intent(AboutUs.this, BookAppointment.class);
+                Intent intent1 = new Intent(AboutUs.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

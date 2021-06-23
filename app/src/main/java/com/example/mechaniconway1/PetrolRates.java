@@ -75,7 +75,7 @@ public class PetrolRates extends AppCompatActivity implements NavigationView.OnN
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(PetrolRates.this, BookAppointment.class);
+                Intent intent1 = new Intent(PetrolRates.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

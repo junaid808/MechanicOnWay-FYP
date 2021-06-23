@@ -117,7 +117,7 @@ public class Tyre extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(Tyre.this, BookAppointment.class);
+                Intent intent1 = new Intent(Tyre.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

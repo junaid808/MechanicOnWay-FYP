@@ -120,7 +120,7 @@ public class Brakes extends AppCompatActivity implements NavigationView.OnNaviga
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(Brakes.this, BookAppointment.class);
+                Intent intent1 = new Intent(Brakes.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

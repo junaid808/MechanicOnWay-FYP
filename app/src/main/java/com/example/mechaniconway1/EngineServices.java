@@ -116,7 +116,7 @@ public class EngineServices extends AppCompatActivity implements NavigationView.
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(EngineServices.this, BookAppointment.class);
+                Intent intent1 = new Intent(EngineServices.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

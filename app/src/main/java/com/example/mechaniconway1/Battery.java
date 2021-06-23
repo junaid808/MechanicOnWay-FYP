@@ -63,7 +63,7 @@ public class Battery extends AppCompatActivity implements NavigationView.OnNavig
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(Battery.this, BookAppointment.class);
+                Intent intent1 = new Intent(Battery.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

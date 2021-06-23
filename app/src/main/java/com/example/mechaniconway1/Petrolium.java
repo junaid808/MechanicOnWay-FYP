@@ -117,7 +117,7 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(Petrolium.this, BookAppointment.class);
+                Intent intent1 = new Intent(Petrolium.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 

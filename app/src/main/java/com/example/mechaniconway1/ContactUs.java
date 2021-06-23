@@ -75,7 +75,7 @@ public class ContactUs extends AppCompatActivity implements NavigationView.OnNav
                 break;
 
             case R.id.book_appointment:
-                Intent intent1 = new Intent(ContactUs.this, BookAppointment.class);
+                Intent intent1 = new Intent(ContactUs.this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 
