@@ -1,25 +1,22 @@
 package com.example.mechaniconway1;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.navigation.NavigationView;
+import com.firebase.geofire.GeoFire;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
 
-public class BookingDetails extends AppCompatActivity {
-
-
+public class CancelAppointment extends AppCompatActivity {
     private TextView userName;
     private TextView userAddress;
     private TextView userEmail;
@@ -27,32 +24,31 @@ public class BookingDetails extends AppCompatActivity {
     private TextView userService;
     private TextView userDate;
     private TextView userTime;
+    private Button CancelAppointmentButton;
 
     private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
     private String onlineCustomerID;
 
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    Toolbar toolbar;
-    Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booking_details);
+        setContentView(R.layout.activity_cancel_appointment);
+
 
         mAuth = FirebaseAuth.getInstance();
         onlineCustomerID=FirebaseAuth.getInstance().getCurrentUser().getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("CustomerBookings");
 
-        userName = findViewById(R.id.password_mechanic1);
-        userAddress=findViewById(R.id.password_mechanic2);
-        userEmail=findViewById(R.id.password_mechanic3);
-        userContact=findViewById(R.id.password_mechanic4);
-        userService=findViewById(R.id.password_mechanic5);
-        userDate=findViewById(R.id.password_mechanic6);
-        userTime=findViewById(R.id.password_mechanic7);
+        userName = findViewById(R.id.cancel_appointment1);
+        userAddress=findViewById(R.id.cancel_appointment2);
+        userEmail=findViewById(R.id.cancel_appointment3);
+        userContact=findViewById(R.id.cancel_appointment4);
+        userService=findViewById(R.id.cancel_appointment5);
+        userDate=findViewById(R.id.cancel_appointment6);
+        userTime=findViewById(R.id.cancel_appointment7);
+        CancelAppointmentButton =findViewById(R.id.cancel_btn_booking);
 
 
         databaseReference.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
@@ -91,10 +87,17 @@ public class BookingDetails extends AppCompatActivity {
             }
         });
 
+        CancelAppointmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                DatabaseReference customerBookingsData = FirebaseDatabase.getInstance().getReference().child("CustomerBookings").child(onlineCustomerID);
+                customerBookingsData.removeValue();
+                finish();
 
 
-
-
+            }
+        });
 
     }
 }

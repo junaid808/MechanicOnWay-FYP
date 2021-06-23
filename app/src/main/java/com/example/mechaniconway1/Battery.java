@@ -68,7 +68,7 @@ public class Battery extends AppCompatActivity implements NavigationView.OnNavig
                 break;
 
             case R.id.nav_cancel_appointment:
-                Intent intent2 = new Intent(Battery.this, Parts.class);
+                Intent intent2 = new Intent(Battery.this, CancelAppointment.class);
                 startActivity(intent2);
                 break;
         /*    case R.id.nav_login:

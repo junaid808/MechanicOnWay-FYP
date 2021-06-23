@@ -122,7 +122,7 @@ public class Petrolium extends AppCompatActivity implements NavigationView.OnNav
                 break;
 
             case R.id.nav_cancel_appointment:
-                Intent intent2 = new Intent(Petrolium.this, Parts.class);
+                Intent intent2 = new Intent(Petrolium.this, CancelAppointment.class);
                 startActivity(intent2);
                 break;
            /* case R.id.nav_login:

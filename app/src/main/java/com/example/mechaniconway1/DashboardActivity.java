@@ -136,7 +136,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 break;
 
             case R.id.nav_cancel_appointment:
-                Intent intent2 = new Intent(DashboardActivity.this, Parts.class);
+                Intent intent2 = new Intent(DashboardActivity.this, CancelAppointment.class);
                 startActivity(intent2);
                 break;
            /* case R.id.nav_login:

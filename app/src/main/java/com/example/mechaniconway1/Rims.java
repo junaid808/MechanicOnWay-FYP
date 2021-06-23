@@ -65,7 +65,7 @@ public class Rims extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
 
             case R.id.nav_cancel_appointment:
-                Intent intent2 = new Intent(Rims.this, Parts.class);
+                Intent intent2 = new Intent(Rims.this, CancelAppointment.class);
                 startActivity(intent2);
                 break;
             /*case R.id.nav_login:

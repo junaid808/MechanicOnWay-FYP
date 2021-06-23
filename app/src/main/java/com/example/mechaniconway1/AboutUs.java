@@ -84,7 +84,7 @@ public class AboutUs extends AppCompatActivity implements NavigationView.OnNavig
                 break;
 
             case R.id.nav_cancel_appointment:
-                Intent intent2 = new Intent(AboutUs.this, Parts.class);
+                Intent intent2 = new Intent(AboutUs.this, CancelAppointment.class);
                 startActivity(intent2);
                 break;
            /* case R.id.nav_login:

@@ -122,7 +122,7 @@ public class Tyre extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
 
             case R.id.nav_cancel_appointment:
-                Intent intent2 = new Intent(Tyre.this, Parts.class);
+                Intent intent2 = new Intent(Tyre.this, CancelAppointment.class);
                 startActivity(intent2);
                 break;
             /*case R.id.nav_login:

@@ -87,7 +87,7 @@ public class DieselRates extends AppCompatActivity implements NavigationView.OnN
                 break;
 
             case R.id.nav_cancel_appointment:
-                Intent intent2 = new Intent(DieselRates.this, Parts.class);
+                Intent intent2 = new Intent(DieselRates.this, CancelAppointment.class);
                 startActivity(intent2);
                 break;
           /*  case R.id.nav_login:
