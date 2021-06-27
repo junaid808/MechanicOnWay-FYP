@@ -17,7 +17,7 @@
         <item
             android:id="@+id/book_appointment"
             android:icon="@drawable/book_appointment_icon"
-            android:title="Book Appointment" />
+            android:title="Booking Details" />
         <item
             android:id="@+id/nav_cancel_appointment"
             android:icon="@drawable/parts_icon"

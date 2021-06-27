@@ -1,471 +1,393 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bb"
-    tools:context=".BookingDetails">
-
-
-
-    <TextView
-        android:id="@+id/logo"
+    android:id="@+id/drawer_layout_booking_details"
+    tools:context=".BookingDetails"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+    <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Booking Details"
-        android:textColor="@color/white"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view_booking_details"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_booking_details"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="MECHANIC ON WAY"
+                app:navigationIcon="@drawable/menu2"
+                />
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/logo"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@+id/logo">
+
 
         <TextView
+            android:id="@+id/logo"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/logo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/logo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginTop="10dp"
+                android:text="Name    "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+
+                />
+            <EditText
+                android:id="@+id/password_mechanic1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
             app:layout_constraintHorizontal_bias="1.0"
-            android:layout_marginTop="10dp"
-            android:text="Name    "
-            android:textColor="@color/white"
-            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-             />
-        <EditText
-            android:id="@+id/password_mechanic1"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Address"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:id="@+id/password_mechanic2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+
+                />
+
+            <!-- <TextView
+                 android:id="@+id/textViewSignUp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:text="SignUp"
+                 android:textColor="#E64A19"
+
+                 android:textStyle="bold" />-->
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/input_bg"
-            android:layout_marginLeft="20dp"
-            android:ems="10"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Email     "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:id="@+id/password_mechanic3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
 
-    </LinearLayout>
+                />
 
- <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            <!-- <TextView
+                 android:id="@+id/textViewSignUp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:text="SignUp"
+                 android:textColor="#E64A19"
 
-        <TextView
+                 android:textStyle="bold" />-->
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="Address"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-             />
-        <EditText
-            android:id="@+id/password_mechanic2"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Contact "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:id="@+id/password_mechanic4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+
+                />
+
+            <!-- <TextView
+                 android:id="@+id/textViewSignUp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:text="SignUp"
+                 android:textColor="#E64A19"
+
+                 android:textStyle="bold" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/input_bg"
-            android:layout_marginLeft="20dp"
-            android:ems="10"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Service  "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:id="@+id/password_mechanic5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
 
-        <!-- <TextView
-             android:id="@+id/textViewSignUp"
-             android:layout_width="wrap_content"
-             android:layout_height="match_parent"
-             android:text="SignUp"
-             android:textColor="#E64A19"
+                />
 
-             android:textStyle="bold" />-->
+            <!-- <TextView
+                 android:id="@+id/textViewSignUp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:text="SignUp"
+                 android:textColor="#E64A19"
 
-    </LinearLayout>
+                 android:textStyle="bold" />-->
 
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/linearLayout6"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="Email     "
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            />
-        <EditText
-            android:id="@+id/password_mechanic3"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Date       "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:id="@+id/password_mechanic6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+
+                />
+
+
+            <!-- <TextView
+                 android:id="@+id/textViewSignUp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:text="SignUp"
+                 android:textColor="#E64A19"
+
+                 android:textStyle="bold" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/input_bg"
-            android:layout_marginLeft="20dp"
-            android:ems="10"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Time      "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:id="@+id/password_mechanic7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
 
-        <!-- <TextView
-             android:id="@+id/textViewSignUp"
-             android:layout_width="wrap_content"
-             android:layout_height="match_parent"
-             android:text="SignUp"
-             android:textColor="#E64A19"
+                />
 
-             android:textStyle="bold" />-->
+            <!-- <TextView
+                 android:id="@+id/textViewSignUp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:text="SignUp"
+                 android:textColor="#E64A19"
 
-    </LinearLayout>
+                 android:textStyle="bold" />-->
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="Contact "
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            />
-        <EditText
-            android:id="@+id/password_mechanic4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/input_bg"
-            android:layout_marginLeft="20dp"
-            android:ems="10"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-
-            />
-
-        <!-- <TextView
-             android:id="@+id/textViewSignUp"
-             android:layout_width="wrap_content"
-             android:layout_height="match_parent"
-             android:text="SignUp"
-             android:textColor="#E64A19"
-
-             android:textStyle="bold" />-->
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="Service  "
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            />
-        <EditText
-            android:id="@+id/password_mechanic5"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/input_bg"
-            android:layout_marginLeft="20dp"
-            android:ems="10"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-
-            />
-
-        <!-- <TextView
-             android:id="@+id/textViewSignUp"
-             android:layout_width="wrap_content"
-             android:layout_height="match_parent"
-             android:text="SignUp"
-             android:textColor="#E64A19"
-
-             android:textStyle="bold" />-->
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="Date       "
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            />
-        <EditText
-            android:id="@+id/password_mechanic6"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/input_bg"
-            android:layout_marginLeft="20dp"
-            android:ems="10"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-
-            />
-
-
-        <!-- <TextView
-             android:id="@+id/textViewSignUp"
-             android:layout_width="wrap_content"
-             android:layout_height="match_parent"
-             android:text="SignUp"
-             android:textColor="#E64A19"
-
-             android:textStyle="bold" />-->
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout6"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="Time      "
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            />
-        <EditText
-            android:id="@+id/password_mechanic7"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/input_bg"
-            android:layout_marginLeft="20dp"
-            android:ems="10"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-
-            />
-
-        <!-- <TextView
-             android:id="@+id/textViewSignUp"
-             android:layout_width="wrap_content"
-             android:layout_height="match_parent"
-             android:text="SignUp"
-             android:textColor="#E64A19"
-
-             android:textStyle="bold" />-->
-
-    </LinearLayout>
+        </LinearLayout>
 
 
 
 
 
-
-
-<!--    <EditText
-        android:id="@+id/password_mechanic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_security"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/email_mechanic"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/email_mechanic"
-        app:layout_constraintTop_toBottomOf="@+id/email_mechanic" />-->
-
-   <!-- <EditText
-        android:id="@+id/email_mechanic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_email"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
-
-    <TextView
-        android:id="@+id/forgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Forgot Password?"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/password_mechanic"
-        app:layout_constraintTop_toBottomOf="@+id/password_mechanic" />
-
-    <Button
-        android:id="@+id/login_mechanic_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_bg"
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="@+id/password_mechanic"
-        app:layout_constraintStart_toStartOf="@+id/password_mechanic"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />-->
-
-
-
-
-    <!--  <Button
-          android:id="@+id/btnGoogle"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="32dp"
-          android:layout_marginEnd="8dp"
-          android:background="@drawable/btn_bg"
-          android:drawableLeft="@drawable/ic_google"
-          android:drawablePadding="10dp"
-          android:paddingLeft="20dp"
-          android:text="Google"
-          android:textAlignment="textStart"
-          android:textAllCaps="false"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toStartOf="@+id/btnFacebook"
-          app:layout_constraintHorizontal_bias="0.5"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-          app:layout_constraintVertical_bias="0.32999998" />-->
-
-    <!--   <Button
-           android:id="@+id/btnFacebook"
-           android:layout_width="0dp"
-           android:layout_height="wrap_content"
-           android:layout_marginStart="8dp"
-           android:layout_marginEnd="32dp"
-           android:background="@drawable/btn_bg"
-           android:drawableStart="@drawable/ic_facebook"
-           android:drawablePadding="10dp"
-           android:paddingLeft="20dp"
-           android:text="Facebook"
-           android:textAlignment="textStart"
-           android:textAllCaps="false"
-           app:layout_constraintBottom_toBottomOf="@+id/btnGoogle"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintHorizontal_bias="0.5"
-           app:layout_constraintStart_toEndOf="@+id/btnGoogle"
-           app:layout_constraintTop_toTopOf="@+id/btnGoogle" />-->
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
 
 
