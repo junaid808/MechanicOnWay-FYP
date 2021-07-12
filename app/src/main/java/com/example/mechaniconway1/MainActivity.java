@@ -308,7 +308,12 @@ import com.google.firebase.database.FirebaseDatabase;
             firebaseAuth.removeAuthStateListener(authStateListener);
         }
     }
-}
+
+     public void FacebookLogin(View view) {
+
+
+     }
+ }
 
 
 

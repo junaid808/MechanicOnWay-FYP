@@ -140,6 +140,7 @@
         app:layout_constraintVertical_bias="0.32999998" />
 
     <Button
+        android:onClick="FacebookLogin"
         android:id="@+id/btnFacebook"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
