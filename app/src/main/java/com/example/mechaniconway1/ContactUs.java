@@ -49,12 +49,12 @@ public class ContactUs extends AppCompatActivity implements NavigationView.OnNav
 
     }
 
-    public void CallAdmin(View view) {
-        Intent intent = new Intent (Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:03244366399"));
-        startActivity(intent);
-
-    }
+//    public void CallAdmin(View view) {
+//        Intent intent = new Intent (Intent.ACTION_DIAL);
+//        intent.setData(Uri.parse("tel:03244366399"));
+//        startActivity(intent);
+//
+//    }
     public void onBackPressed(){
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
@@ -102,5 +102,10 @@ public class ContactUs extends AppCompatActivity implements NavigationView.OnNav
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void EmailAdmin(View view) {
+        Intent i  = new Intent(this, EmailAdmin.class);
+        startActivity(i);
     }
 }

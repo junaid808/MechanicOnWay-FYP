@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".EmailAdmin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To:    admin@mechaniconway.com"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/baloo"
+        android:textSize="22sp"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subject:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/edit_text_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailSubject" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/edit_text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:lines="10" />
+
+    <Button
+        android:id="@+id/button_send"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_bg"
+        android:backgroundTint="@color/purple_700"
+        android:text="Email Us"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+         />
+
+</LinearLayout>

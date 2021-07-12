@@ -51,19 +51,19 @@
 
         <Button
             android:id="@+id/btnCall"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
 
             android:layout_marginBottom="16dp"
             android:background="@drawable/btn_bg"
-            android:backgroundTint="#D32F2F"
-            android:text="CALL US"
+            android:backgroundTint="@color/purple_700"
+            android:text="Email Us"
             android:textAllCaps="false"
             android:textColor="#ffffff"
-            android:textSize="35dp"
+            android:textSize="25dp"
 
 
-            android:onClick="CallAdmin"
+            android:onClick="EmailAdmin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
