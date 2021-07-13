@@ -91,6 +91,7 @@
         app:layout_constraintStart_toStartOf="@+id/password_customer"
         app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
     4
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -121,43 +122,61 @@
 
     <Button
         android:id="@+id/btnGoogle_customer"
-        android:layout_width="0dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="35dp"
         android:background="@drawable/btn_bg"
         android:drawableLeft="@drawable/ic_google"
         android:drawablePadding="10dp"
         android:paddingLeft="20dp"
-        android:text="Google"
+        android:text="Google Sign In"
         android:textAlignment="textStart"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnFacebook"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/btnFacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.32999998" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:onClick="FacebookLogin"
-        android:id="@+id/btnFacebook"
-        android:layout_width="0dp"
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/btn_bg"
-        android:drawableStart="@drawable/ic_facebook"
-        android:drawablePadding="10dp"
-        android:paddingLeft="20dp"
-        android:text="Facebook"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="@+id/btnGoogle_customer"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnGoogle_customer"
-        app:layout_constraintTop_toTopOf="@+id/btnGoogle_customer" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogle_customer" />
+
+    <!--    <com.facebook.login.widget.LoginButton-->
+<!--        android:id="@+id/btnFacebook"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="97dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="97dp"-->
+<!--        android:layout_marginBottom="76dp"-->
+<!--&lt;!&ndash;        android:background="@drawable/btn_bg"&ndash;&gt;-->
+<!--        android:drawableStart="@drawable/ic_facebook"-->
+<!--        android:drawablePadding="10dp"-->
+<!--        android:onClick="FacebookLogin"-->
+<!--        android:paddingLeft="20dp"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textAlignment="textStart"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnGoogle_customer" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
