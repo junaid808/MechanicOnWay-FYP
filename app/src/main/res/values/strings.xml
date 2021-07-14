@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MechanicOnWay1</string>
+    <string name="app_name">MechanicOnWay</string>
     <string name="navigation_drawer_close">Open Navigation  drawer</string>
     <string name="navigation_drawer_open">Close Navigation  drawer</string>
     <string name="title_activity_customer_maps">Map</string>
