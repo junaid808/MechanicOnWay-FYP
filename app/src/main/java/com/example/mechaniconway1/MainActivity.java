@@ -83,11 +83,13 @@ import java.util.Arrays;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        mAuth=FirebaseAuth.getInstance();
+
 
 
         firebaseAuth=FirebaseAuth.getInstance();
+
         FacebookSdk.sdkInitialize(getApplicationContext());
+        mAuth=FirebaseAuth.getInstance();
         //fbButton = findViewById(R.id.fblogin_button);
         //fbButton.setReadPermissions("email","public_profile");
         //fbSignIn = findViewById(R.id.fbImageView);
@@ -185,7 +187,7 @@ import java.util.Arrays;
                     public void onClick(DialogInterface dialog, int which) {
 
                         String mail = resetMail.getText().toString();
-                        mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new  OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(MainActivity.this,"Reset Link Sent to your Email. ",Toast.LENGTH_SHORT).show();

@@ -74,8 +74,6 @@ public class EngineOilForm extends AppCompatActivity {
         CustomerService = findViewById(R.id.engineOilSpinner);
         BookingDate = findViewById(R.id.set_dateEngineOilForm);
         BookingTime = findViewById(R.id.set_timeEngineOilForm);
-
-
         date = (Button) findViewById(R.id.selectdateEngineoilform);
         time = (Button) findViewById(R.id.selecttimeEngineoilform);
         set_date = (TextView) findViewById(R.id.set_dateEngineOilForm);
@@ -116,10 +114,10 @@ public class EngineOilForm extends AppCompatActivity {
             };
         }*/
         String[] items = new String[]{ extra};
-//create an adapter to describe how the items are displayed, adapters are used in several places in android.
-//There are multiple variations of this, but this is the basic variant.
+
+
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-//set the spinners adapter to the previously created one.
+
         dropdown.setAdapter(adapter);
 
         date.setOnClickListener(new OnClickListener() {

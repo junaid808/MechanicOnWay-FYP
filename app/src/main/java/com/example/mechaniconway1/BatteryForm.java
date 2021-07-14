@@ -80,8 +80,7 @@ public class BatteryForm extends AppCompatActivity {
         set_time = (TextView) findViewById(R.id.set_timeBatteryForm);
         Spinner dropdown = findViewById(R.id.batterySpinner);
         String[] items = new String[]{extra};
-//create an adapter to describe how the items are displayed, adapters are used in several places in android.
-//There are multiple variations of this, but this is the basic variant.
+
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
 //set the spinners adapter to the previously created one.
         dropdown.setAdapter(adapter);
@@ -231,5 +230,6 @@ public class BatteryForm extends AppCompatActivity {
     ){
         Booking booking = new Booking(CustomerName,CustomerAddress,CustomerEmail,CustomerContact,CustomerService,BookingDate,BookingTime);
         CustomerDatabaseRef.child(currentUser.getUid()).setValue(booking);
+        //CustomerDatabaseRef.child(CustomerName).setValue(booking);
     }
 }

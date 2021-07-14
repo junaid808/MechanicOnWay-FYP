@@ -51,46 +51,6 @@ public class EngineServices extends AppCompatActivity implements NavigationView.
 
 
 
-//        ImageView EngineService = (ImageView) findViewById(R.id.engine);
-//        EngineService.setClickable(true);
-//        EngineService.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(DashboardActivity.this,EngineServices.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//        ImageView TyreService = (ImageView) findViewById(R.id.tyre);
-//        TyreService.setClickable(true);
-//        TyreService.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(DashboardActivity.this,Tyre.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//        ImageView PetroliumService = (ImageView) findViewById(R.id.petrolium);
-//        PetroliumService.setClickable(true);
-//        PetroliumService.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(DashboardActivity.this,Petrolium.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//
-//        ImageView BreakService = (ImageView) findViewById(R.id.brakes);
-//        BreakService.setClickable(true);
-//        BreakService.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(DashboardActivity.this,Brakes.class);
-//                startActivity(i);
-//            }
-//        });
 
 
 

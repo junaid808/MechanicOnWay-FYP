@@ -17,11 +17,10 @@
         android:layout_gravity="start"/>
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF">
+        android:background="@drawable/contact_us_image">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_contact_us"
@@ -37,7 +36,7 @@
             app:navigationIcon="@drawable/menu2"
             />
 
-        <ImageView
+        <!--<ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/contact_us_image"
@@ -45,30 +44,62 @@
             android:layout_marginBottom="150dp"
             android:id="@+id/image112"
 
-            />
+            />-->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/login_customer_btn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/login_customer_btn"
+            app:layout_constraintTop_toBottomOf="@+id/login_customer_btn">
+
+
+
+        </LinearLayout>
 
 
         <Button
             android:id="@+id/btnCall1"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="72dp"
             android:background="@drawable/btn_bg"
             android:backgroundTint="@color/purple_700"
+            android:onClick="EmailAdmin"
             android:text="Email Us"
             android:textAllCaps="false"
             android:textColor="#ffffff"
             android:textSize="25dp"
-
-
-            android:onClick="EmailAdmin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btnCall"
+            android:id="@+id/btncall12"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/purple_700"
+            android:onClick="CallAdmin"
+            android:text="Call Us"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <!--<Button
+            android:id="@+id/btnCall11"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -82,6 +113,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="606dp" />
+            tools:layout_editor_absoluteY="606dp" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

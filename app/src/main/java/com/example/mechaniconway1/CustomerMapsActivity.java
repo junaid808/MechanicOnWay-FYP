@@ -365,7 +365,7 @@ public class CustomerMapsActivity extends FragmentActivity implements OnMapReady
                     HashMap driversMap = new HashMap();
                     driversMap.put("CustomerRideID", customerID);
                     DriversRef.updateChildren(driversMap);
-                    Toast.makeText(CustomerMapsActivity.this, "Test 3", Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(CustomerMapsActivity.this, "Test 3", Toast.LENGTH_SHORT).show();*/
 
 
 
