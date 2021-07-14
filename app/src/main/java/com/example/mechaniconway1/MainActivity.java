@@ -13,7 +13,9 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -35,6 +37,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
@@ -71,7 +75,7 @@ import java.util.Arrays;
     private FirebaseAuth mAuth;
     private DatabaseReference customerDatabaseRef;
     private String onlineCustomerID;
-
+    private TextView forgetPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,7 +97,8 @@ import java.util.Arrays;
         progressDialog=new ProgressDialog(this);
         SignUpTv=findViewById(R.id.signUp_customer);
         googleSignIn=findViewById(R.id.btnGoogle_customer);
-        fbButton = findViewById(R.id.login_button);
+        fbButton = findViewById(R.id.btnFacebook);
+        forgetPassword=findViewById(R.id.forgotPassword);
         mCallBackManager = CallbackManager.Factory.create();
         fbButton.setPermissions(Arrays.asList("email","user_birthday"));
         fbButton.registerCallback(mCallBackManager, new FacebookCallback<LoginResult>() {
@@ -163,6 +168,48 @@ import java.util.Arrays;
                 Intent intent=new Intent(MainActivity.this,SignUpActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText resetMail = new EditText(v.getContext());
+                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
+                passwordResetDialog.setTitle("Reset Password ? ");
+                passwordResetDialog.setMessage("Enter your Email to receive Reset Link. ");
+                passwordResetDialog.setView(resetMail);
+
+                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        String mail = resetMail.getText().toString();
+                        mAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(MainActivity.this,"Reset Link Sent to your Email. ",Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(MainActivity.this,"Error ! Resent Link si not Sent. "+ e.getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+
+                    }
+                });
+
+                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                passwordResetDialog.create().show();
+
             }
         });
     }

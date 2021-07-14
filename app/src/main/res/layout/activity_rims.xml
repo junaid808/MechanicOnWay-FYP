@@ -95,7 +95,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/oil"
+                            app:srcCompat="@drawable/rim1"
                             android:onClick="goToWheelForm"
 
                             />
@@ -150,7 +150,7 @@
                             android:layout_height="185dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            app:srcCompat="@drawable/rim2"
                             android:onClick="goToWheelForm2"
                             />
                     </RelativeLayout>
@@ -212,7 +212,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/oil"
+                            app:srcCompat="@drawable/rim3"
                             android:onClick="goToWheelForm3"
 
                             />
@@ -266,7 +266,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            app:srcCompat="@drawable/rim4"
                             android:onClick="goToWheelForm4"
                             />
                     </RelativeLayout>

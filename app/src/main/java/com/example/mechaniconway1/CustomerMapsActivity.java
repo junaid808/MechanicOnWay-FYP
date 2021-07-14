@@ -159,14 +159,18 @@ public class CustomerMapsActivity extends FragmentActivity implements OnMapReady
             @Override
             public void onClick(View v)
             {
-                //SettingsButton.setVisibility(View.GONE);
+
+
                 try{
                     //Try to do something on here
                     if(requestType)
                     {
+                        SettingsButton.setVisibility(View.VISIBLE);
+                        Logout.setVisibility(View.VISIBLE);
                         Toast.makeText(CustomerMapsActivity.this,"Cancelling Ride",Toast.LENGTH_SHORT).show();
 
                         requestType=false;
+
                         //geoQuery.removeAllListeners();
 //error
                         //DriverLocationRef.removeEventListener(DriverLocationRefListner);
@@ -207,6 +211,8 @@ public class CustomerMapsActivity extends FragmentActivity implements OnMapReady
                         relativeLayout.setVisibility(View.GONE);
                     }
                     else {
+                        SettingsButton.setVisibility(View.GONE);
+                        Logout.setVisibility(View.GONE);
                         requestType = true;
                         customerID = FirebaseAuth.getInstance().getCurrentUser().getUid();
                         GeoFire geoFire = new GeoFire(CustomerDatabaseRef);

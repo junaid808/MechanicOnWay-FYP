@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <TextView
-        android:id="@+id/forgotPassword"
+        android:id="@+id/forgotPassword1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -116,7 +116,7 @@
         android:text="Login"
         app:layout_constraintEnd_toEndOf="@+id/password_mechanic"
         app:layout_constraintStart_toStartOf="@+id/password_mechanic"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword1" />
 
 
     <LinearLayout
@@ -132,7 +132,7 @@
         app:layout_constraintStart_toStartOf="@+id/login_mechanic_btn"
         app:layout_constraintTop_toBottomOf="@+id/login_mechanic_btn">
 
-        <TextView
+       <!-- <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dont have an Account?"
@@ -145,7 +145,7 @@
             android:text="SignUp"
             android:textColor="#E64A19"
 
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
 
     </LinearLayout>
 

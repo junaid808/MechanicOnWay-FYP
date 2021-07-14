@@ -46,7 +46,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="0dp"
                 android:layout_height="230dp"
-                android:src="@drawable/engine1"
+                android:src="@drawable/transmission"
                 android:scaleType="fitXY"
 
                 app:layout_constraintEnd_toEndOf="@id/toolbar"
@@ -98,7 +98,7 @@
                             android:layout_height="185dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/oil" />
+                            app:srcCompat="@drawable/car_oil" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -134,7 +134,7 @@
                             android:layout_height="185dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            app:srcCompat="@drawable/battery_engine"
                             android:onClick="goToBattery"
                             />
                     </RelativeLayout>

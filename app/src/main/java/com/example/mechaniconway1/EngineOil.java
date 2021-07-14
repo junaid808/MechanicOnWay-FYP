@@ -59,30 +59,28 @@ public class EngineOil extends AppCompatActivity implements NavigationView.OnNav
         switch (menuItem.getItemId()) {
 
             case R.id.nav_home:
-                Intent intent = new Intent(EngineOil.this, DashboardActivity.class);
+                Intent intent = new Intent(this, DashboardActivity.class);
                 startActivity(intent);
                 break;
             case R.id.book_appointment:
-                Intent intent1 = new Intent(EngineOil.this, BookingDetails.class);
+                Intent intent1 = new Intent(this, BookingDetails.class);
                 startActivity(intent1);
                 break;
 
             case R.id.nav_cancel_appointment:
-                Intent intent2 = new Intent(EngineOil.this, CancelAppointment.class);
+                Intent intent2 = new Intent(this, CancelAppointment.class);
                 startActivity(intent2);
                 break;
-          /*  case R.id.nav_login:
-                menu.findItem(R.id.nav_logout).setVisible(true);
-                menu.findItem(R.id.nav_profile).setVisible(true);
-                menu.findItem(R.id.nav_login).setVisible(false);
-                break;
-            case R.id.nav_logout:
-                menu.findItem(R.id.nav_logout).setVisible(false);
-                menu.findItem(R.id.nav_profile).setVisible(false);
-                menu.findItem(R.id.nav_login).setVisible(true);
-                break;*/
+
+
             case R.id.nav_about_us:
-                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show(); break;
+                Intent intent5 = new Intent(this, AboutUs.class);
+                startActivity(intent5);
+                break;
+            case R.id.nav_contact:
+                Intent intent4 =  new Intent(this, ContactUs.class);
+                startActivity(intent4);
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

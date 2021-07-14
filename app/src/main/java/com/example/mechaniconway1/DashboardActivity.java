@@ -156,6 +156,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 Intent intent4 =  new Intent(this, ContactUs.class);
                 startActivity(intent4);
                 break;
+
+            case R.id.nav_logout:
+                Intent intent5 =  new Intent(this, ValidationScreen.class);
+                startActivity(intent5);
+                break;
+
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

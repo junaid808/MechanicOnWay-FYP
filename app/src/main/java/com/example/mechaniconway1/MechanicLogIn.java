@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -32,6 +35,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
@@ -48,7 +53,7 @@ public class MechanicLogIn extends AppCompatActivity {
     private EditText mechanicPassword;
     private FirebaseAuth Myauth;
     private ProgressDialog loadingBar;
-    private TextView SignUpMechanic;
+    private TextView resetPasswordMechanic;
 
 
     @Override
@@ -61,6 +66,7 @@ public class MechanicLogIn extends AppCompatActivity {
         mechanicLoginButton = (Button) findViewById(R.id.login_mechanic_btn);
         mechanicEmail = (EditText) findViewById(R.id.email_mechanic);
         mechanicPassword =(EditText) findViewById(R.id.password_mechanic);
+        resetPasswordMechanic = findViewById(R.id.forgotPassword1);
         loadingBar = new ProgressDialog(this);
         /*SignUpMechanic= findViewById(R.id.signUp);*/
 
@@ -76,6 +82,48 @@ public class MechanicLogIn extends AppCompatActivity {
                 String password = mechanicPassword.getText().toString();
 
                 loginMechanic(email,password);
+            }
+        });
+
+        resetPasswordMechanic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText resetMail = new EditText(v.getContext());
+                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
+                passwordResetDialog.setTitle("Reset Password ? ");
+                passwordResetDialog.setMessage("Enter your Email to receive Reset Link. ");
+                passwordResetDialog.setView(resetMail);
+
+                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        String mail = resetMail.getText().toString();
+                        Myauth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(MechanicLogIn.this,"Reset Link Sent to your Email. ",Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(MechanicLogIn.this,"Error ! Resent Link si not Sent. "+ e.getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+
+                    }
+                });
+
+                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                passwordResetDialog.create().show();
+
             }
         });
         /*SignUpMechanic.setOnClickListener(new View.OnClickListener() {

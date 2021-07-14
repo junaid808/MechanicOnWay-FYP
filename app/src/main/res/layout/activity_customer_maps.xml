@@ -128,7 +128,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:background="@color/com_facebook_blue"
-        android:text="Logout"
+        android:text="Dashboard"
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="15sp"

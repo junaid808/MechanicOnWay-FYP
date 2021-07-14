@@ -96,7 +96,7 @@
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
                             android:onClick="goToBrakeForm"
-                            app:srcCompat="@drawable/oil"
+                            app:srcCompat="@drawable/mercedes_brake"
 
                             />
                     </RelativeLayout>
@@ -150,7 +150,7 @@
                             android:layout_height="185dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            app:srcCompat="@drawable/check1"
                             android:onClick="goToBrakeForm2"
                             />
                     </RelativeLayout>
@@ -212,7 +212,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/oil"
+                            app:srcCompat="@drawable/toyota_brake"
                             android:onClick="goToBrakeForm3"
 
                             />
@@ -266,7 +266,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            app:srcCompat="@drawable/mercedes"
                             android:onClick="goToBrakeForm4"
                             />
                     </RelativeLayout>

@@ -96,7 +96,7 @@
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
                             android:onClick="goToBatteryForm"
-                            app:srcCompat="@drawable/oil"
+                            app:srcCompat="@drawable/ags"
 
                             />
                     </RelativeLayout>
@@ -123,7 +123,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/imgSTP"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="30dp"
                             android:text="EXIDE"
                             android:textColor="#000000"
                             android:textSize="20sp"
@@ -147,10 +147,10 @@
                         <ImageView
                             android:id="@+id/imgSTP"
                             android:layout_width="wrap_content"
-                            android:layout_height="185dp"
+                            android:layout_height="125dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            android:layout_marginTop="55dp"
+                            app:srcCompat="@drawable/exide"
                             android:onClick="goToBatteryForm2"
                             />
                     </RelativeLayout>
@@ -210,10 +210,10 @@
                         <ImageView
                             android:id="@+id/imgShell"
                             android:layout_width="wrap_content"
-                            android:layout_height="185dp"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/oil"
+                            android:layout_height="135dp"
+                            app:srcCompat="@drawable/osaka"
                             android:onClick="goToBatteryForm3"
+                            android:layout_marginTop="55dp"
 
                             />
                     </RelativeLayout>
@@ -240,7 +240,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/imgHav"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="0dp"
                             android:text="PHOENIX"
                             android:textColor="#000000"
                             android:textSize="20sp"
@@ -267,7 +267,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            app:srcCompat="@drawable/phoenix"
                             android:onClick="goToBatteryForm4"
                             />
                     </RelativeLayout>

@@ -77,7 +77,7 @@ public class BrakeReapirForm extends AppCompatActivity {
         set_time = (TextView) findViewById(R.id.set_timeBreakRepairForm);
         Spinner dropdown = findViewById(R.id.BreakRepairFormSpinner);
         //create a list of items for the spinner.
-        String[] items = new String[]{"Brake Repair Services"};
+        String[] items = new String[]{"Brake Repair Services @RS 400"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);

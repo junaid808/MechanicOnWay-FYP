@@ -95,7 +95,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/oil"
+                            app:srcCompat="@drawable/zic"
                             android:onClick="goToEngineForm"
 
                             />
@@ -150,7 +150,7 @@
                             android:layout_height="185dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            app:srcCompat="@drawable/stp1"
                             android:onClick="goToEngineForm2"
                             />
                     </RelativeLayout>
@@ -211,8 +211,8 @@
                             android:id="@+id/imgShell"
                             android:layout_width="wrap_content"
                             android:layout_height="185dp"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/oil"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/shell1"
                             android:onClick="goToEngineForm3"
 
                             />
@@ -264,9 +264,9 @@
                         <ImageView
                             android:id="@+id/imgHav"
                             android:layout_width="wrap_content"
-                            android:layout_height="185dp"
+                            android:layout_height="180dp"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/transmission"
+                            app:srcCompat="@drawable/havoline"
                             android:onClick="goToEngineForm4"
                             />
                     </RelativeLayout>

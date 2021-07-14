@@ -65,10 +65,12 @@
                 android:id="@+id/nav_contact"
                 android:icon="@drawable/contact_icon"
                 android:title="Contact Us" />
+
             <item
-                android:id="@+id/nav_rate"
-                android:icon="@drawable/rate_us_icon"
-                android:title="Rate Us" />
+
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/signout_icon"
+                android:title="Logout" />
         </menu>
     </item>
 </menu>
