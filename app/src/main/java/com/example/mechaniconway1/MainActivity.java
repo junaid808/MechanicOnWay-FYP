@@ -46,10 +46,13 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 
  public class MainActivity extends AppCompatActivity {
     private EditText emailEt,passwordEt;
-    private Button SignInButton;
+    private Button SignInButton,FacebookLoginButton;
     private TextView SignUpTv;
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
@@ -59,7 +62,7 @@ import com.google.firebase.database.FirebaseDatabase;
     private String TAG = "MainActivity";
     private int RC_Sign_In = 1;
     /*private ImageView googleSignIn;*/
-     private Button googleSignIn;
+    private Button googleSignIn;
     private CallbackManager mCallBackManager;
     private LoginButton fbButton;
     private ImageView fbSignIn;
@@ -90,8 +93,10 @@ import com.google.firebase.database.FirebaseDatabase;
         progressDialog=new ProgressDialog(this);
         SignUpTv=findViewById(R.id.signUp_customer);
         googleSignIn=findViewById(R.id.btnGoogle_customer);
+        fbButton = findViewById(R.id.login_button);
         mCallBackManager = CallbackManager.Factory.create();
-       /* fbButton.registerCallback(mCallBackManager, new FacebookCallback<LoginResult>() {
+        fbButton.setPermissions(Arrays.asList("email","user_birthday"));
+        fbButton.registerCallback(mCallBackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG1,"OnSucces"+ loginResult);
@@ -109,7 +114,7 @@ import com.google.firebase.database.FirebaseDatabase;
             public void onError(FacebookException error) {
                 Log.d(TAG1,"onError" + error);
             }
-        });*/
+        });
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
